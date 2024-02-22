@@ -1,3 +1,141 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Use it */
 body {
-    background: rgb(89, 255, 0);
+  font-family: "Roboto", sans-serif;
+  
+/*   background: gray; */
+/*   background: linear-gradient(180deg, #766A6A 31.97%, rgba(217, 217, 217, 0.00) 100%); */
+  
+/*   background: url(https://assets.codepen.io/16425/bgpattern.webp) no-repeat center center; */
+  
+    background: url(https://assets.codepen.io/16425/bgpattern.webp);
+ 
+}
+
+article h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  color: hotpink;
+  
+   animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+
+article p, 
+aside p {
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+
+
+article img {
+  border-radius: 2em;
+  filter: blur(4px);
+ 
+  transition: filter .5s;
+  
+  /* hide image   */
+  opacity: 0;
+  
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+article img:hover {
+  filter: blur(0);
+}
+
+/* nav link states */
+a {
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* First */
+a:link, 
+a:visited {
+  color: white;
+  background: hotpink;
+  border-radius: 4px;
+  color: white;
+  
+  min-width: 5rem;
+  margin: .5em;
+  padding: .25rem;
+  
+  text-align: center;
+}
+
+/* Last Frame */
+a:hover, 
+a:active {
+  background: orange;
+  border: 1px white;
+  color:hotpink;
+  
+  transform: scale(1.5);
+  
+  transition: 
+    background .5s, 
+    transform .5s 1s;
+}
+
+/* Layouts */
+main { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Primary */
+main article { }
+/* Secondary */
+main aside { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keyframe Animation  */
+@keyframes fadeIn {
+   
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+/* media queries */
+@media screen and (max-width:700px) {
+  
+  main{
+    grid-template-columns: repeat(1, 1fr);
+    }
+  
+  main img{
+    display: block;
+    max-height: 50%;
+    width: 100%;
+  }
+  main h1{ 
+  text-align: center;
+  font-size: 2rem;}
+    
+  aside nav {
+    flex-direction: column;
+  }
+  
 }
