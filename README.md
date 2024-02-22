@@ -11,3 +11,6 @@ Starter (boilerplate) for all future projects.
 * Don't start with nothing
 * Common boilerplate for web projects
 * I am a human being who makes mistakes
+## citations
+*[text to be shown] (URL)
+* [code pen] (https://codepen.io/pen/)
